@@ -20,6 +20,10 @@ import java.util.Map;
 public class OrganizationController {
 
     private final OrganizationService organizationService;
+    
+    public OrganizationController(OrganizationService organizationService) {
+    	this.organizationService = organizationService;
+    }
 
     @GetMapping("/current")
     @Operation(summary = "Get current authenticated tenant organization details")
