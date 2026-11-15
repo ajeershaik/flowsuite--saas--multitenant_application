@@ -23,7 +23,12 @@ import java.time.Instant;
 @Tag(name = "Audit Logs", description = "Immutable audit history of security, membership, and workspace events")
 public class AuditLogController {
 
+    
     private final AuditLogService auditLogService;
+
+    public AuditLogController(AuditLogService auditLogService) {
+        this.auditLogService = auditLogService;
+    }
 
     @GetMapping
     @PreAuthorize("hasAnyRole('OWNER', 'ADMIN')")
