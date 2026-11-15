@@ -1,5 +1,6 @@
 package com.flowsuite.dto;
 
+import com.flowsuite.entity.Customer.CustomerBuilder;
 import com.flowsuite.enums.Role;
 import com.flowsuite.enums.TaskPriority;
 import com.flowsuite.enums.TaskStatus;
@@ -236,6 +237,7 @@ public class WorkspaceDto {
         private String status;
         private Instant createdAt;
         private List<String> associatedProjectIds;
+		
     }
 
     @Data

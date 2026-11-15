@@ -1,20 +1,17 @@
 package com.flowsuite.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.time.Instant;
 
-@Data
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class ErrorResponse {
-    private Instant timestamp;
-    private int status;
-    private String errorCode;
-    private String message;
-    private String path;
+
+    private final Instant timestamp;
+    private final int status;
+    private final String errorCode;
+    private final String message;
+    private final String path;
 }
