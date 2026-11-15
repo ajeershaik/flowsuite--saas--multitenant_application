@@ -21,6 +21,10 @@ import org.springframework.web.bind.annotation.*;
 public class TaskController {
 
     private final TaskService taskService;
+    
+    public TaskController(TaskService taskService) {
+    	this.taskService = taskService;
+    }
 
     @GetMapping
     @Operation(summary = "Get paginated tasks (filterable by project and status)")

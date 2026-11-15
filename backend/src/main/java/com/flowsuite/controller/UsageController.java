@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class UsageController {
 
     private final UsageService usageService;
+    public UsageController(UsageService usageService) {
+    	this.usageService = usageService;
+    }
 
     @GetMapping("/dashboard")
     @PreAuthorize("hasAnyRole('OWNER', 'ADMIN')")
