@@ -20,6 +20,10 @@ import java.util.Map;
 public class SubscriptionController {
 
     private final SubscriptionService subscriptionService;
+    
+    public SubscriptionController(SubscriptionService subscriptionService) {
+    	this.subscriptionService = subscriptionService;
+    }
 
     @GetMapping("/plans")
     @Operation(summary = "Get list of active subscription plans and dynamic limits")
