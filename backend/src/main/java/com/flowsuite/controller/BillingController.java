@@ -20,7 +20,11 @@ import java.util.List;
 @Tag(name = "Billing & Stripe Checkout", description = "Stripe test-mode checkout sessions and billing invoice history")
 public class BillingController {
 
-    private final StripeService stripeService;
+	private final StripeService stripeService;
+
+	public BillingController(StripeService stripeService) {
+	    this.stripeService = stripeService;
+	}
 
     @PostMapping("/checkout-session")
     @PreAuthorize("hasRole('OWNER')")
