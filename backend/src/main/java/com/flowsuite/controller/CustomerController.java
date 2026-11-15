@@ -22,6 +22,10 @@ import java.util.Map;
 public class CustomerController {
 
     private final CustomerService customerService;
+    
+    public CustomerController(CustomerService customerService) {
+    	this.customerService = customerService;
+    }
 
     @GetMapping
     @PreAuthorize("hasAnyRole('OWNER', 'ADMIN', 'MANAGER')")
